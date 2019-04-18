@@ -5,6 +5,10 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AccountComponent } from './account/account.component';
+import { MusicComponent } from './music/music.component';
+import { MoviesComponent } from './movies/movies.component';
+import { SportsComponent } from './sports/sports.component';
+import { AddvideosComponent } from './addvideos/addvideos.component';
 
 
 const routes: Routes = [
@@ -13,6 +17,10 @@ const routes: Routes = [
   { path: 'home', component:HomeComponent },
   { path: 'login', component:LoginComponent },
   { path: 'account', component:AccountComponent },
+  { path: 'music', component:MusicComponent },
+  { path: 'movies', component:MoviesComponent },
+  { path: 'sports', component:SportsComponent },
+  { path: 'addvideos', component:AddvideosComponent },
   { path: '**', component:PageNotFoundComponent }
 ];
 
