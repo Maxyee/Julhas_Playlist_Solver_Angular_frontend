@@ -7,6 +7,11 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AccountComponent } from './account/account.component';
+import { MusicComponent } from './music/music.component';
+import { SportsComponent } from './sports/sports.component';
+import { MoviesComponent } from './movies/movies.component';
+import { AddvideosComponent } from './addvideos/addvideos.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +20,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     routingComponents,
     HomeComponent,
     LoginComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AccountComponent,
+    MusicComponent,
+    SportsComponent,
+    MoviesComponent,
+    AddvideosComponent
   ],
   imports: [
     BrowserModule,

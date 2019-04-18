@@ -4,6 +4,7 @@ import {RegisterComponent} from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AccountComponent } from './account/account.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'home', component:HomeComponent },
   { path: 'login', component:LoginComponent },
-  { path: '**', component:PageNotFoundComponent}
+  { path: 'account', component:AccountComponent },
+  { path: '**', component:PageNotFoundComponent }
 ];
 
 @NgModule({
