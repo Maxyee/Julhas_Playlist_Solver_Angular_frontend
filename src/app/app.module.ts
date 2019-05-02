@@ -13,6 +13,11 @@ import { SportsComponent } from './sports/sports.component';
 import { MoviesComponent } from './movies/movies.component';
 import { AddvideosComponent } from './addvideos/addvideos.component';
 
+//import { HttpClientModule} from '@angular/common/http';
+import { djangoApiService } from './services/djangoApi.service';
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,13 +30,15 @@ import { AddvideosComponent } from './addvideos/addvideos.component';
     MusicComponent,
     SportsComponent,
     MoviesComponent,
-    AddvideosComponent
+    AddvideosComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [djangoApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

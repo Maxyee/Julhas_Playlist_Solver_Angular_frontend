@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Categories } from '../classes/categories';
+import { djangoApiService } from '../services/djangoApi.service';
+
+
 
 @Component({
   selector: 'app-home',
@@ -7,9 +11,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _djangoApiService: djangoApiService){}
+
+  listcategories:Categories[]
 
   ngOnInit() {
+    this._djangoApiService.getcategories()
+      .subscribe
+      (
+          data=>
+          {
+              this.listcategories = data;
+          }
+      );
   }
 
 }
