@@ -28,11 +28,29 @@ Navigate to `http://localhost:4200/home`. Because I didn't Implement the Login R
 ## NOTE
 If you want to fetch data to your home at first you need to Run the backend server and then add some data using this Angular App.
 
+## PostMan Check
+PostMan is a software where you can create request to server end and check that your API is working correctly or not. I used postman you can use another if you want.
+
+For Video GET request:
+![alt text](https://github.com/Maxyee/Julhas_Playlist_Solver_Angular_frontend/blob/master/PlaylistScreenShot/playlistHome.png)
+
+For Video POST request:
+![alt text](https://github.com/Maxyee/Julhas_Playlist_Solver_Angular_frontend/blob/master/PlaylistScreenShot/playlistHome.png)
+
+For Video PUT request:
+![alt text](https://github.com/Maxyee/Julhas_Playlist_Solver_Angular_frontend/blob/master/PlaylistScreenShot/playlistHome.png)
+
+For Video DELETE request:
+![alt text](https://github.com/Maxyee/Julhas_Playlist_Solver_Angular_frontend/blob/master/PlaylistScreenShot/playlistHome.png)
 
 # Application Preview
 
 At first you will see the home page where a REST API request GET is called. Which Brings All of the data from the database about Video.
-![alt text](https://github.com/Maxyee/Julhas_Playlist_Solver_Angular_frontend/blob/master/PlaylistScreenShot/playlistHome.png)
+After That when you click the button Update:
+
+it will bind all the data of that specific post to the updateVideo Form:
+
+
 
 
 
