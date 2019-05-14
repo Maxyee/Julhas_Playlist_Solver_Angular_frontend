@@ -1,20 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm, FormGroup, FormBuilder } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { VideoService } from '../shared/videos/video.service';
+import { Router } from '@angular/router';
+
 
 @Component({
-  selector: 'app-addvideos',
-  templateUrl: './addvideos.component.html',
-  styleUrls: ['./addvideos.component.css']
+  selector: 'app-updatevideos',
+  templateUrl: './updatevideos.component.html',
+  styleUrls: ['./updatevideos.component.css']
 })
-export class AddvideosComponent implements OnInit {
+export class UpdatevideosComponent implements OnInit {
 
-  constructor(private vidservice: VideoService, private toastr: ToastrService) { }
+  constructor(private vidservice: VideoService, private toastr: ToastrService, private router: Router) { }
 
   ngOnInit() {
-    this.resetForm();
   }
+
 
   resetForm(form? : NgForm){
     if(form != null)
@@ -58,6 +60,7 @@ export class AddvideosComponent implements OnInit {
         this.toastr.warning("Updated Successfully",'VID. updated')
         this.resetForm(form);
         this.vidservice.refreshList();
+        this.router.navigate(['/home']);
     });
   }
 

@@ -9,6 +9,7 @@ import { MusicComponent } from './music/music.component';
 import { MoviesComponent } from './movies/movies.component';
 import { SportsComponent } from './sports/sports.component';
 import { AddvideosComponent } from './addvideos/addvideos.component';
+import { UpdatevideosComponent } from './updatevideos/updatevideos.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'movies', component:MoviesComponent },
   { path: 'sports', component:SportsComponent },
   { path: 'addvideos', component:AddvideosComponent },
+  { path: 'updatevideos', component:UpdatevideosComponent},
   { path: '**', component:PageNotFoundComponent }
 ];
 

@@ -1,9 +1,4 @@
 import { Component } from '@angular/core';
-import { djangoApiService } from './services/djangoApi.service';
-import { Categories } from './classes/categories';
-
-
-
 
 @Component({
   selector: 'app-root',

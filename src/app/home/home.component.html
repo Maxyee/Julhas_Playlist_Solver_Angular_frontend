@@ -30,24 +30,36 @@
               </ul>
             </div>
 
-            <div class="card center" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
+            <div class="card center" style="width: 25rem;" *ngFor="let vid of vidservice.list">
+
+              <p class="card-text">{{ vid.id }}</p>
               <div class="card-body">
-                <h5 class="card-title">video title</h5>
-                <p class="card-text">video description Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="card-title">{{ vid.video_title }}</h5>
+
+                <p class="card-text">{{ vid.video_description }}</p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Video Categories Name</li>
+                <li class="list-group-item">{{ vid.categories }}</li>
+                <li class="list-group-item">
+                  <youtube-player
+                    [videoId]="vid.video_url"
+                    (ready)="savePlayer($event)"
+                    (change)="onStateChange($event)"
+                  ></youtube-player>
+                </li>
+              </ul>
+              <ul class="list-group list-group-flush" (click)="populateForm(vid)" routerLink="/updatevideos">
+                <li class="list-group-item"><button (click)="populateForm(vid)" type="button" class="btn btn-primary">Update Video</button></li>
               </ul>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><button type="button" class="btn btn-danger">Delete Video</button></li>
+                <li class="list-group-item"><button (click)="onDelete(vid.id)" type="button" class="btn btn-danger">Delete Video</button></li>
               </ul>
 
             </div>
 
             <nav class="navbar navbar-light bg-light">
-                  <span class="navbar-text justify-content-end">
-                    Developed By Julhas
-                  </span>
-                </nav>
+              <span class="navbar-text justify-content-end">
+                Developed By Julhas
+              </span>
+            </nav>
       </div>

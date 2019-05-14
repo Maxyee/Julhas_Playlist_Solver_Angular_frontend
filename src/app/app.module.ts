@@ -12,10 +12,16 @@ import { MusicComponent } from './music/music.component';
 import { SportsComponent } from './sports/sports.component';
 import { MoviesComponent } from './movies/movies.component';
 import { AddvideosComponent } from './addvideos/addvideos.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
 
-//import { HttpClientModule} from '@angular/common/http';
-import { djangoApiService } from './services/djangoApi.service';
+import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
+import { VideoService } from './shared/videos/video.service';
+import { CategorieService } from './shared/categories/categorie.service';
+import { UpdatevideosComponent } from './updatevideos/updatevideos.component';
+
 
 
 @NgModule({
@@ -31,14 +37,18 @@ import { HttpClientModule } from '@angular/common/http';
     SportsComponent,
     MoviesComponent,
     AddvideosComponent,
-
+    UpdatevideosComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    NgxYoutubePlayerModule,
+    ToastrModule.forRoot()
   ],
-  providers: [djangoApiService],
+  providers: [VideoService,CategorieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
