@@ -16,10 +16,8 @@ export class HomeComponent implements OnInit {
   constructor(private vidservice:VideoService, private catservice:CategorieService,private toastr: ToastrService){}
 
 
-
   player: YT.Player;
   private id: string = 'ZWJH7JQCjLM';
-
 
 
   savePlayer(player) {
